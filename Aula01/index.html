@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - Front End - 2</title>
+</head>
+<body>
+    <script>
+        let notas = [5, 7, 8, 9];
+
+        let total = notas.reduce(
+            function calcular(tot, elemento) {
+                console.log(tot);
+                return tot + elemento;
+            }
+        )
+        let media = total / notas.length;
+
+        console.log(media);
+
+        let exibicao = notas.forEach(
+            function mostrar(elemento, i) {
+                console.log(`Parabéns pela conclusão do ${i+1} bimestre sua nota foi: ${elemento}`)
+            }
+        )
+
+        function aprovar() {
+            if (media > 7) {
+                console.log("Você foi aprovado na disciplina de Front End II");
+            } else {
+                console.log("Você não foi aprovado na disciplina de Front End II");
+            }
+        }
+
+        aprovar();
+    </script>
+</body>
+</html>
